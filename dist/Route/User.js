@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const _Controller_1 = require("../Controller");
+const _Middlewares_1 = require("../Middlewares");
+const _Utils_1 = require("../Utils");
+const router = (0, express_1.Router)();
+router.post("/login", _Controller_1.UserController.login);
+router.post("/comfirm", _Controller_1.UserController.comfirmMail);
+router.post("/sendMailResetPassowrd", _Controller_1.UserController.sendMailResetPassowrd);
+router.post("/register", _Controller_1.UserController.register);
+router.get("/", _Controller_1.UserController.getUser);
+router.patch("/udpdate/:id", [_Middlewares_1.checkJwt, (0, _Middlewares_1.checkRole)(_Utils_1.typeUser)], _Controller_1.UserController.update);
+router.patch("/resetPassword", [_Middlewares_1.checkJwt, (0, _Middlewares_1.checkRole)(_Utils_1.typeUser)], _Controller_1.UserController.resetPassword);
+router.patch("/admin-udpdate/:id", _Controller_1.UserController.update);
+router.post("/admin-create", _Controller_1.UserController.register);
+router.delete("/:id", _Controller_1.UserController.deleteUser);
+router.get("/getInfo", [_Middlewares_1.checkJwt, (0, _Middlewares_1.checkRole)(_Utils_1.typeUser)], _Controller_1.UserController.getInfo);
+router.get("/block-user/:id", _Controller_1.UserController.blockUser);
+router.get("/count", _Controller_1.UserController.count);
+exports.default = router;
+//# sourceMappingURL=User.js.map
