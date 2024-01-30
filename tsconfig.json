@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true, 
+		"strictPropertyInitialization": false,
+		"sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@Route": [
+        "Route"
+      ],
+      "@Controller": [
+        "Controller"
+      ],
+      "@Middlewares": [
+        "Middlewares"
+      ],
+      "@Models": [
+        "Models"
+      ],
+      "@Utils": [
+        "Utils"
+      ],
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "useUnknownInCatchVariables": false,
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  }
+}

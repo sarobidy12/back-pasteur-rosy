@@ -1,0 +1,84 @@
+Arguments: 
+  /snap/node/6331/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  14.19.3
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/home/bidy/Documents/jobs/CLOUD/API/node_modules/abbrev'
+
+npm manifest: 
+  {
+    "name": "back-end",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "ToJs": "npx tsc",
+      "start": "node dist/app.js",
+      "dev": "nodemon  src/app.ts",
+      "unit:testing": "mocha -r  ts-node/register '__tests__/**/*.ts'"
+    },
+    "keywords": [],
+    "author": "RANAIVOMANANA TAHIANA",
+    "license": "ISC",
+    "devDependencies": {
+      "@ef-carbon/tspm": "^2.2.5",
+      "@types/express": "^4.17.1",
+      "eslint": "^7.31.0",
+      "eslint-config-airbnb": "^18.2.1",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-config-react-app": "^6.0.0",
+      "eslint-plugin-import": "^2.23.4",
+      "eslint-plugin-jsx-a11y": "^6.4.1",
+      "eslint-plugin-prettier": "^3.4.0",
+      "eslint-plugin-react": "^7.24.0",
+      "eslint-plugin-react-hooks": "^4.2.0",
+      "eslint-plugin-simple-import-sort": "^7.0.0",
+      "tsconfig-paths": "^4.0.0",
+      "@types/dotenv": "^8.2.0",
+      "typescript": "^4.5.5"
+    },
+    "dependencies": {
+      "@types/cors": "^2.8.12",
+      "@types/jsonwebtoken": "^8.5.8",
+      "@types/mongoose": "^5.10.3",
+      "@types/helmet": "^4.0.0",
+      "mongoose": "^5.11.17",
+      "cors": "^2.8.5",
+      "express": "^4.17.1",
+      "module-alias": "^2.2.2",
+      "helmet": "^5.1.0",
+      "nodemon": "^2.0.16"
+    },
+    "_moduleAliases": {
+      "@Route": [
+        "dist/Route"
+      ],
+      "@Controller": [
+        "dist/Controller"
+      ],
+      "@Middlewares": [
+        "dist/Middlewares"
+      ],
+      "@Models": [
+        "dist/Models"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

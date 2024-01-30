@@ -1,0 +1,70 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ToJs": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+    "start": "node dist/app.js",
+    "start-deploy": "ts-node src/app.ts",
+    "dev": "nodemon  src/app.ts",
+    "unit:testing": "mocha -r  ts-node/register '__tests__/**/*.ts'"
+  },
+  "keywords": [],
+  "author": "RANAIVOMANANA TAHIANA",
+  "license": "ISC",
+  "devDependencies": {
+    "@ef-carbon/tspm": "^2.2.5",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.1",
+    "@types/socket.io": "^3.0.2",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/helmet": "^4.0.0",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/mongoose": "^5.10.3",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "editorjs-html": "^3.4.3",
+    "express": "^4.17.1",
+    "helmet": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.2",
+    "mongoose": "^5.11.17",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.8",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.9.1"
+  },
+  "_moduleAliases": {
+    "@Route": [
+      "dist/Route"
+    ],
+    "@Controller": [
+      "dist/Controller"
+    ],
+    "@Middlewares": [
+      "dist/Middlewares"
+    ],
+    "@Models": [
+      "dist/Models"
+    ],
+    "@Utils": [
+      "dist/Utils"
+    ]
+  }
+}
